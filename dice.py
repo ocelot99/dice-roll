@@ -6,11 +6,8 @@ import math
 def main():#I/O
     try:
         dice = int(input("Enter number of dice: "))#Gets number of dice.
-        if dice == 0:#If 0 then loop
-            print("Please enter a number higher than 0:")
-            main()
         sides = int(input("Enter sides on the dice: "))#Gets number of sides for dice.
-        if sides == 0:
+        if (sides <= 0 or dice <= 0):
             print("Please enter a number higher than 0:")
             main()
         notrandom(dice, sides)#Passes variables to the dice roll function.
