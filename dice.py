@@ -4,7 +4,13 @@ import math
 def main():
     try:
         dice = int(input("Enter number of dice: "))
+        if dice == 0:
+            print("Please enter a number higher than 0:")
+            main()
         sides = int(input("Enter sides on the dice: "))
+        if sides == 0:
+            print("Please enter a number higher than 0:")
+            main()
         notrandom(dice, sides)
     except (ValueError):
         print("Invalid Input")
